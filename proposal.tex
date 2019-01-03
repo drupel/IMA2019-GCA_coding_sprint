@@ -3,10 +3,69 @@
 
 \usepackage{amsmath,amssymb,latexsym}
 
-\title{IMA Proposal - Generalized Cluster Algebras Coding Sprint}
+\title{IMA Proposal - GeneralizedClusterAlgebra Coding Sprint}
+
+\author{Esther Banaian}
+\address{University of Minnesota}
+\author{Elizabeth Kelley}
+\address{University of Minnesota}
+\author{Dylan Rupel}
+\address{Michigan State University}
 
 \begin{document}
 
-  
+  \maketitle
+
+  \subsection*{Overview}
+  Cluster algebras are recursively defined subalgebras of affine rational function fields.
+  Their ubiquity throughout mathematics and mathematical physics have warranted the creation of a ClusterAlgebra package in SAGE.
+  Recently, this definition has been extended to allow polynomial (rather than binomial) exchange relations.
+  Such more flexible structure is working its way into mathematics, but as yet is not implemented in SAGE.
+
+  \subsection*{Goals}
+  The goal of this proposal is to implement generalized cluster algebras together with their currently understood relationships to standard cluster algebras.
+  Features to be implemented include:
+  \begin{itemize}
+    \item generalized cluster algebras;
+    \item left/right companion cluster algebras;
+    \item folding/unfolding (generalized) cluster algebras.
+  \end{itemize}
+  Additional features which may be considered upon completion of the initial project may include:
+  \begin{itemize}
+    \item implementing snake graphs for (generalized) cluster algebras from surfaces;
+    \item reproducing ClusterComplex as a subobject of a ClusterAlgebra (implemented using g-vectors).
+  \end{itemize}
+
+  \subsection*{History}
+  Cluster mutations first entered SAGE via the ClusterQuiver and ClusterSeed packages written by Gregg Musiker and Christian Stump.  
+  Of particular importance, this code includes methods for discovering mutation classes and searching the exchange graph of a cluster algebra.
+  The ClusterAlgebra package was written by the third proposer and Salvatore Stella as a reimplementation using the standard algebra/element framework.
+
+  \subsection*{Design}
+  The proposed implementation will be achieved by modifying the current ClusterAlgebra package with a new set of parameters which recover the standard package upon specialization.
+  A rough plan for the changes is:
+  \begin{enumerate}
+    \item add initializations for:
+      \begin{itemize}
+        \item exchange polynomial degrees,
+        \item exchange coefficient specializations;
+      \end{itemize}
+    \item add global parameters representing intermediate exchange coefficients;
+    \item modify matrix mutation method using exchange polynomial degrees;
+    \item modify $c$-vector and $g$-vector recursions;
+    \item modify $F$-polynomial recursion;
+    \item implement left- and right-companion $c$-vectors, $g$-vectors, and $F$-polynomials;
+    \item implement exchange coefficient specialization (this may need to be proven, c.f. Geiss, Leclerc, Schr\"oer results on quantum specialization);
+    \item add the alias GeneralizedClusterAlgebra;
+    \item add examples to the documentation.
+  \end{enumerate}
+
+  \subsection*{Participants}
+  \begin{itemize}
+    \item Esther Banaian is a graduate student at University of Minnesota working on (generalized) cluster algebras.
+    \item Elizabeth Kelley is a graduate student at University of Minnesota working on (generalized) cluster algebras.
+    \item Dylan Rupel is a research associate at Michigan State University.
+      He has written many papers on (generalized) cluster algebras and coauthored the current ClusterAlgebra package in SAGE.
+  \end{itemize}
 
 \end{document}

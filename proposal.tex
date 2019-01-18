@@ -21,9 +21,9 @@
 
   \subsection*{Overview}
   Cluster algebras are recursively defined subalgebras of affine rational function fields.
-  Their ubiquity throughout mathematics and mathematical physics have warranted the creation of a ClusterAlgebra package in SAGE.
+  Their ubiquity throughout mathematics and mathematical physics has warranted the creation of a ClusterAlgebra package in SAGE.
   Recently, this definition has been extended to allow polynomial (rather than binomial) exchange relations.
-  Such more flexible structure is working its way into mathematics, but as yet is not implemented in SAGE.
+ This more flexible structure is working its way into mathematics, but is not currently implemented in SAGE.
 
   \subsection*{Goals}
   The goal of this proposal is to implement generalized cluster algebras together with their currently understood relationships to standard cluster algebras.
@@ -46,10 +46,10 @@
   The ClusterAlgebra package was written by the third proposer and Salvatore Stella as a reimplementation using the standard algebra/element framework.
 
   Generalized cluster algebras were first studied by Leonid Chekhov and Michael Shapiro for understanding surfaces with orbifold singularities.
-  The original definition was simplified by Tomoki Nakanishi under certain normalization assumptions, in particular the mutation of exchange polynomials becomes particularly simple in this case.
+  The original definition was simplified by Tomoki Nakanishi under certain normalization assumptions, in which case the mutation of exchange polynomials becomes particularly simple.
 
   \subsection*{Design}
-  This initial implementation of generalized cluster algebras will likely restrict to the normalized case.
+  This initial implementation of generalized cluster algebras will likely be restricted to the normalized case.
   The proposed implementation will be achieved by modifying the current ClusterAlgebra package with a new set of parameters which recover the standard package upon specialization.
   A rough plan for the changes is:
   \begin{enumerate}
@@ -72,7 +72,7 @@
   \subsection*{Participants}
   \begin{itemize}
     \item Esther Banaian is a graduate student at University of Minnesota working on (generalized) cluster algebras.
-    \item Elizabeth Kelley is a graduate student at University of Minnesota working on (generalized) cluster algebras.
+    \item Elizabeth Kelley is a graduate student at University of Minnesota working on (generalized) cluster algebras.  During SageDays@ICERM in July 2018, she contributed to the implementation of snake graphs for cluster variables from surfaces (trac ticket \#16310).
     \item Dylan Rupel is a research associate at Michigan State University.
       He has written many papers on (generalized) cluster algebras and coauthored the current ClusterAlgebra package in SAGE.
   \end{itemize}

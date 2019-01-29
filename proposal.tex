@@ -3,7 +3,7 @@
 
 \usepackage{amsmath,amssymb,latexsym}
 
-\title{IMA Proposal - GeneralizedClusterAlgebra Coding Sprint}
+\title{IMA Proposal - Generalized Cluster Algebra Coding Sprint}
 
 \author{Esther Banaian}
 \address[Esther Banaian]{University of Minnesota}
@@ -23,7 +23,7 @@
   Cluster algebras are recursively defined subalgebras of affine rational function fields.
   Their ubiquity throughout mathematics and mathematical physics has warranted the creation of a ClusterAlgebra package in SAGE.
   Recently, this definition has been extended to allow polynomial (rather than binomial) exchange relations.
- This more flexible structure is working its way into mathematics, but is not currently implemented in SAGE.
+  This more flexible structure is working its way into mathematics, but is not currently implemented in SAGE.
 
   \subsection*{Goals}
   The goal of this proposal is to implement generalized cluster algebras together with their currently understood relationships to standard cluster algebras.
@@ -49,7 +49,7 @@
   The original definition was simplified by Tomoki Nakanishi under certain normalization assumptions, in which case the mutation of exchange polynomials becomes particularly simple.
 
   \subsection*{Design}
-  This initial implementation of generalized cluster algebras will likely be restricted to the normalized case.
+  This initial implementation of generalized cluster algebras will likely begin by restricting to the normalized case, though necessary coercions may render such restrictions unwarranted. 
   The proposed implementation will be achieved by modifying the current ClusterAlgebra package with a new set of parameters which recover the standard package upon specialization.
   A rough plan for the changes is:
   \begin{enumerate}

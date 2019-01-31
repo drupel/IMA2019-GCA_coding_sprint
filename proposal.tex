@@ -63,16 +63,26 @@
     \item modify $c$-vector and $g$-vector recursions;
     \item modify $F$-polynomial recursion;
     \item implement left- and right-companion $c$-vectors, $g$-vectors, and $F$-polynomials;
-    \item implement exchange coefficient specialization (this may need to be proven, c.f. Geiss, Leclerc, Schr\"oer results on quantum specialization);
+    \item implement exchange coefficient specialization (this may need to be proven, c.f. results of Geiss-Leclerc-Schr\"oer on quantum specialization);
     \item introduce unfold() method implementing a particular exchange coefficient specialization to the unfolded (generalized) cluster algebra;
     \item add the alias GeneralizedClusterAlgebra;
     \item add examples to the documentation.
   \end{enumerate}
 
+  \subsection*{Timeline}
+  We request four days at the IMA for completion of the main project, ideally this meeting will take place in mid-July.
+  The full implementation of generalized cluster mutations with proper documentation is expected to be completed on the first working day.
+  Coefficient specializations (with a special function for companion specializations) together with proper documentation is expected to be completed on the second day.
+  Depending on theoretical concerns, this could extend to an extra day.
+  Implementation for folding/unfolding of generalized cluster algebras with proper documentation is expected to be completed on the third day.
+  Final polishing and uniformization of the code will be completed on the fourth day.
+
   \subsection*{Participants}
   \begin{itemize}
-    \item Esther Banaian is a graduate student at University of Minnesota working on (generalized) cluster algebras, quiver representations, and frieze patterns. During SageDays 95 in June 2018, she worked on implementing a package on Sage to compute and display frieze patterns. 
-    \item Elizabeth Kelley is a graduate student at University of Minnesota working on (generalized) cluster algebras.  During SageDays@ICERM in July 2018, she contributed to the implementation of snake graphs for cluster variables from surfaces (trac ticket \#16310).
+    \item Esther Banaian is a graduate student at University of Minnesota working on (generalized) cluster algebras, quiver representations, and frieze patterns.
+      During SageDays 95 in June 2018, she worked on implementing a package in Sage to compute and display frieze patterns. 
+    \item Elizabeth Kelley is a graduate student at University of Minnesota working on (generalized) cluster algebras.
+      During SageDays@ICERM in July 2018, she contributed to the implementation of snake graphs for cluster variables from surfaces (trac ticket \#16310).
     \item Dylan Rupel is a research associate at Michigan State University.
       He has written many papers on (generalized) cluster algebras and coauthored the current ClusterAlgebra package in SAGE.
   \end{itemize}
